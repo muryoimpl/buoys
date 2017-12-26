@@ -20,6 +20,7 @@ matrix:
       gemfile: gemfiles/Gemfile-rails4.2.x
 
 before_script:
+  - 'gem install rake --no-document'
   - 'cd test/dummy; rake db:migrate; rake db:test:prepare; cd ../..'
 
 script:
