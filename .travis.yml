@@ -11,6 +11,7 @@ gemfile:
   - gemfiles/Gemfile-rails4.2.x
   - gemfiles/Gemfile-rails5.0.x
   - gemfiles/Gemfile-rails5.1.x
+  - gemfiles/Gemfile-rails5.2.x
 
 matrix:
   allow_failures:
