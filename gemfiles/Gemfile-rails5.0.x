@@ -5,6 +5,4 @@ gem 'sqlite3'
 
 gem 'buoys', path: '../'
 
-group :test do
-  gem 'rubocop', '~> 0.54'
-end
+gem 'rubocop', '0.54.0'
