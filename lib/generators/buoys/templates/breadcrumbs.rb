@@ -23,7 +23,7 @@ end
 #   # same as `link I18n.t(:story, scope: 'buoys.breadcrumbs', default: story), story_path(story)`
 # end
 
-# You can alse override Buoys configuration
+# You can also override Buoys configuration
 #
 # ex)
 # buoy :story_tasks do |story|
