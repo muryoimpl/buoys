@@ -21,8 +21,11 @@ matrix:
     - rvm: ruby-head
       gemfile: gemfiles/Gemfile-rails4.2.x
 
+before_install:
+  - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+  - gem install bundler -v '< 2'
+
 before_script:
-  - 'gem update bundler'
   - 'gem install rake --no-document'
   - 'cd test/dummy; rake db:migrate; rake db:test:prepare; cd ../..'
 
