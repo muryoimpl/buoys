@@ -4,7 +4,11 @@ require 'test_helper'
 
 class BuoysBuoyTest < ActiveSupport::TestCase
   setup do
-    @view_context = ActionView::Base.new
+    @view_context = if ActionView::Base.respond_to?(:empty)
+                      ActionView::Base.empty
+                    else
+                      ActionView::Base.new # Rails 5.2 or lower
+                    end
     Buoys::Loader.load_buoys_files
   end
 
