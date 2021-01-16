@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     buoys (2.0.1)
-      rails (>= 4.2.0)
+      rails (>= 5.2.0)
 
 GEM
   remote: https://rubygems.org/
