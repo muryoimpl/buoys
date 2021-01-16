@@ -1,0 +1,45 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+
+      matrix:
+        ruby: [2.5.8, 2.6.6, 2.7.2, 3.0.0]
+        gemfile: [Gemfile-rails5.2.x, Gemfile-rails6.0.x, Gemfile-rails6.1.x]
+        exclude:
+          - ruby: 3.0.0
+            gemfile: Gemfile-rails5.2.x
+
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+
+    - name: Setup database
+      env:
+        RAILS_ENV: test
+        BUNDLE_GEMFILE: ../../gemfiles/${{ matrix.gemfile }}
+      run: |
+        cd test/dummy/
+        bin/rake db:test:prepare
+
+    - name: Run minitest
+      env:
+        RAILS_ENV: test
+        BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}
+      run: |
+        bundle exec rake
+
+    - name: Run Rubocop
+      run: |
+        bundle exec rubocop
