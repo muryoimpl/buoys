@@ -38,7 +38,7 @@ jobs:
         RAILS_ENV: test
         BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}
       run: |
-        bundle exec rake
+        bin/test
 
     - name: Run Rubocop
       run: |
