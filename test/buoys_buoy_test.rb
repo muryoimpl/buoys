@@ -33,4 +33,16 @@ class BuoysBuoyTest < ActiveSupport::TestCase
     assert_equal links[0].text, 'Account'
     assert_equal links[0].url,  'http://example.com/account'
   end
+
+  test 'delegate unknown methods to view context' do
+    def @view_context.hello(arg, kwarg:, &block)
+      [arg, kwarg, block]
+    end
+
+    arg, kwarg, block = Buoys::Buoy.new(@view_context, :account).hello('hello', kwarg: ',') { 'world' }
+
+    assert_equal arg,        'hello'
+    assert_equal kwarg,      ','
+    assert_equal block.call, 'world'
+  end
 end
