@@ -40,8 +40,8 @@ module Buoys
     end
     alias parent pre_buoy
 
-    def method_missing(method, *args, &block)
-      context.send(method, *args, &block)
+    def method_missing(method, *args, **kwargs, &block)
+      context.send(method, *args, **kwargs, &block)
     end
   end
 end
