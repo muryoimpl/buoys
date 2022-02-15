@@ -8,14 +8,14 @@ jobs:
       fail-fast: false
 
       matrix:
-        ruby: [2.6.8, 2.7.4, 3.0.2]
+        ruby: [2.6.9, 2.7.5, 3.0.3, 3.1.0]
         gemfile: [Gemfile-rails5.2.x, Gemfile-rails6.0.x, Gemfile-rails6.1.x, Gemfile-rails7.0.x]
         exclude:
-          - ruby: 3.0.2
+          - ruby: 3.0.3
             gemfile: Gemfile-rails5.2.x
-          - ruby: 2.6.8
-            gemfile: Gemfile-rails7.0.x
-          - ruby: 2.6.8
+          - ruby: 3.1.0
+            gemfile: Gemfile-rails5.2.x
+          - ruby: 2.6.9
             gemfile: Gemfile-rails7.0.x
 
     runs-on: ubuntu-latest
@@ -46,4 +46,4 @@ jobs:
 
     - name: Run Rubocop
       run: |
-        bundle exec rubocop
+        bundle exec rubocop .

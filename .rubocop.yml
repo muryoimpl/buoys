@@ -1,7 +1,6 @@
 AllCops:
-  TargetRubyVersion: 2.2
-
-AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
   Exclude:
     - 'vendor/**/*'
     - '**/*.gemspec'
@@ -16,10 +15,10 @@ Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
   EnforcedStyleForEmptyBraces: no_space
 
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Metrics/AbcSize:
@@ -27,7 +26,13 @@ Metrics/AbcSize:
 
 Metrics/BlockLength:
   Max: 30
-  ExcludedMethods: context, describe, specify, test, let, let!
+  IgnoredMethods:
+    - context
+    - describe
+    - specify
+    - test
+    - let
+    - let!
 
 Metrics/BlockNesting:
   Max: 5
@@ -35,7 +40,7 @@ Metrics/BlockNesting:
 Metrics/ClassLength:
   Max: 120
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/MethodLength:
@@ -57,7 +62,9 @@ Style/PercentLiteralDelimiters:
 Style/Documentation:
   Enabled: false
 
-Style/MethodMissing:
+Lint/MissingSuper:
+  Enabled: true
+Style/MissingRespondToMissing:
   Enabled: false
 
 Style/BlockDelimiters:

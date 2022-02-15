@@ -32,7 +32,7 @@ module Buoys
         loaded_times.clear
 
         buoy_files.each do |file|
-          instance_eval File.open(file).read, file
+          instance_eval File.read(file), file
           loaded_times << File.mtime(file)
         end
       end
