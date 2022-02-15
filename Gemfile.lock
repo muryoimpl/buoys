@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    buoys (2.0.2)
+    buoys (2.1.0)
       rails (>= 5.2.0)
 
 GEM
