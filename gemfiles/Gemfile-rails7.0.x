@@ -6,4 +6,5 @@ gem 'sprockets-rails'
 
 gem 'buoys', path: '../'
 
-gem 'rubocop', '~> 0.54.0'
+gem 'rubocop', '~> 1.25'
+gem 'rubocop-rails', '~> 2.13'
