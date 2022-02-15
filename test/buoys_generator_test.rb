@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop:disable Style/RegexpLiteral, Metrics/LineLength
+# rubocop:disable Style/RegexpLiteral, Layout/LineLength
 require 'test_helper'
 require 'generators/buoys/install_generator'
 
@@ -51,4 +51,4 @@ class BuoysGeneratorTest < Rails::Generators::TestCase
     assert_file File.expand_path('./config/locales/buoys.en.yml', dest_root)
   end
 end
-# rubocop:enable Style/RegexpLiteral, Metrics/LineLength
+# rubocop:enable Style/RegexpLiteral, Layout/LineLength

@@ -3,6 +3,7 @@
 module Buoys
   class Buoy
     attr_reader :previous, :context
+
     # buoy :account do
     #   link 'Account', account_path
     # end
