@@ -6,8 +6,8 @@ module Buoys
     attr_reader :current
 
     CONFIG = {
-      current_class: (Buoys::Config.current_class || 'active'),
-      link_current: (Buoys::Config.link_current || false)
+      current_class: Buoys::Config.current_class || 'active',
+      link_current: Buoys::Config.link_current || false
     }.with_indifferent_access
 
     def initialize(text, url, options)
