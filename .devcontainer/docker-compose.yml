@@ -1,0 +1,16 @@
+services:
+  buoys:
+    environment:
+      - EDITOR=nvim
+      - PAGER=less
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ..:/buoys
+      - ../vendor/bundle:/buoys/vendor/bundle:cached
+      - $HOME/.ssh/:/home/vscode/.ssh/
+
+    command: sleep infinity
