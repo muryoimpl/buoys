@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
 
       matrix:
-        ruby: [3.0.6, 3.1.4, 3.2.3, 3.3.0]
+        ruby: [3.1.6, 3.2.4, 3.3.3]
         gemfile: [Gemfile-rails7.1.x, Gemfile-rails7.0.x, Gemfile-rails6.1.x]
 
     runs-on: ubuntu-latest
