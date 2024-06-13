@@ -1,0 +1,16 @@
+{
+    "name": "buoys container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "buoys",
+    "features": {
+      "ghcr.io/jungaretti/features/ripgrep:1": {}
+    },
+    "workspaceFolder": "/buoys",
+    "forwardPorts": [
+        3000
+    ],
+    "mounts": [
+      "source=$HOME/.config/nvim,target=/home/vscode/.config/nvim,type=bind",
+      "source=$HOME/.gitconfig,target=/home/vscode/.gitconfig,type=bind"
+    ]
+}
