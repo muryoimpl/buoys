@@ -2,9 +2,6 @@
     "name": "buoys container",
     "dockerComposeFile": "docker-compose.yml",
     "service": "buoys",
-    "features": {
-      "ghcr.io/jungaretti/features/ripgrep:1": {}
-    },
     "workspaceFolder": "/buoys",
     "forwardPorts": [
         3000
