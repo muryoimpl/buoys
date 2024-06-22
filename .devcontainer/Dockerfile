@@ -10,7 +10,7 @@ RUN apt-get update && \
     tzdata \
     tmux \
     neovim \
-    silversearcher-ag bat
+    silversearcher-ag bat ripgrep
 
 USER vscode
 
