@@ -8,15 +8,18 @@ jobs:
       fail-fast: false
 
       matrix:
-        ruby: [3.1.6, 3.2.4, 3.3.3]
-        gemfile: [Gemfile-rails7.1.x, Gemfile-rails7.0.x, Gemfile-rails6.1.x]
+        ruby: [3.1.6, 3.2.7, 3.3.7, 3.4.2]
+        gemfile: [Gemfile-rails8.0.x, Gemfile-rails7.1.x, Gemfile-rails7.0.x]
+        exclude:
+          - ruby: 3.1.6
+            gemfile: Gemfile-rails8.0.x
 
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
