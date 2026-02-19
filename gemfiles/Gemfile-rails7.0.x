@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.0.0'
+gem 'minitest', '~> 5.0'
 gem 'sqlite3', '~> 1.7'
 gem 'sprockets-rails'
 
