@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 6.1.0'
 gem 'sqlite3', '~> 1.7'
 
 gem 'buoys', path: '../'
