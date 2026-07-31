@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "mutex_m"
   s.add_dependency "drb"
 
-  s.add_development_dependency "sqlite3", "~>1.7"
+  s.add_development_dependency "sqlite3", "~>2.9"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "rubocop", "~> 1.25"
   s.add_development_dependency "rubocop-rails", "~> 2.13"

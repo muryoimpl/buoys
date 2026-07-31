@@ -178,7 +178,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.7.3)
+    sqlite3 (2.9.5)
       mini_portile2 (~> 2.8.0)
     thor (1.4.0)
     timeout (0.6.1)
@@ -200,7 +200,7 @@ DEPENDENCIES
   rails (~> 6.1.7)
   rubocop (~> 1.25)
   rubocop-rails (~> 2.13)
-  sqlite3 (~> 1.7)
+  sqlite3 (~> 2.9)
 
 BUNDLED WITH
    2.3.14
