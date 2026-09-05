@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '~> 3.3.0'
+
 # Declare your gem's dependencies in buoy.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
@@ -13,4 +15,5 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 8.0.0'
+gem 'sprockets-rails'

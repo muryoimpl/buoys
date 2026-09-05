@@ -14,7 +14,7 @@ RUN apt-get update && \
 
 USER vscode
 
-ARG RUBY_VERSION="3.1.6"
+ARG RUBY_VERSION="3.3.12"
 
 RUN mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat
 
