@@ -5,8 +5,8 @@ module Buoys
     # Declare the breadcrumb which want to render in view.
     #
     # <%= buoy :help, true %>
-    def buoy(key, *args)
-      @_buoys_renderer = Buoys::Renderer.new(self, key, *args)
+    def buoy(key, *)
+      @_buoys_renderer = Buoys::Renderer.new(self, key, *)
     end
     alias breadcrumb buoy
 

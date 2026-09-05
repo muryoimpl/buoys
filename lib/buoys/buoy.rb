@@ -13,13 +13,13 @@ module Buoys
     #   link 'Account Edit', edit_account_path(account)
     #   pre_buoy :account
     # end
-    def initialize(context, key, *args)
+    def initialize(context, key, *)
       block = Buoys::Loader.buoys[key]
       raise ArgumentError, "Buoys :#{key} is not found" unless block
 
       @key = key
       @context = context
-      instance_exec(*args, &block)
+      instance_exec(*, &block)
     end
 
     def link(key, *args)
@@ -36,13 +36,13 @@ module Buoys
       @links ||= []
     end
 
-    def pre_buoy(key, *args)
-      @previous = Buoys::Buoy.new(context, key, *args)
+    def pre_buoy(key, *)
+      @previous = Buoys::Buoy.new(context, key, *)
     end
     alias parent pre_buoy
 
-    def method_missing(method, *args, **kwargs, &block)
-      context.send(method, *args, **kwargs, &block)
+    def method_missing(method, ...)
+      context.send(method, ...)
     end
   end
 end

@@ -44,8 +44,8 @@ module Buoys
 
     def extract_options_and_config(opts)
       options = opts.with_indifferent_access
-      config = (options.keys & CONFIG.keys).each_with_object({}) {|key, hash|
-        hash[key] = options.delete(key)
+      config = (options.keys & CONFIG.keys).to_h {|key|
+        [key, options.delete(key)]
       }
 
       [config, options]
