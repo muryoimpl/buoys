@@ -8,11 +8,8 @@ jobs:
       fail-fast: false
 
       matrix:
-        ruby: [3.1.6, 3.2.7, 3.3.7, 3.4.2]
-        gemfile: [Gemfile-rails8.0.x, Gemfile-rails7.1.x, Gemfile-rails7.0.x]
-        exclude:
-          - ruby: 3.1.6
-            gemfile: Gemfile-rails8.0.x
+        ruby: [3.3.12, 3.4.10, 4.0.6]
+        gemfile: [Gemfile-rails8.1.x, Gemfile-rails8.0.x]
 
     runs-on: ubuntu-latest
     env:
