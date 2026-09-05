@@ -6,7 +6,7 @@ PATH
       bigdecimal
       drb
       mutex_m
-      rails (>= 5.2.0)
+      rails (>= 8.0.0)
 
 GEM
   remote: https://rubygems.org/

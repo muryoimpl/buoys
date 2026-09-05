@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", ">= 5.2.0"
+  s.add_dependency "rails", ">= 8.0.0"
   s.add_dependency "base64"
   s.add_dependency "bigdecimal"
   s.add_dependency "mutex_m"
